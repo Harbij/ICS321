@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Matches</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f9fafb; }
+    header {
+      background-color: #166534;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 { margin: 0; font-size: 1.2rem; font-weight: bold; display: flex; align-items: center; }
+    header h1::before {
+      content: "\1F3C6";
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover { text-decoration: underline; }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h2 { color: #166534; margin-bottom: 1rem; }
+    table {
+      width: 100%;
+      background: white;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    th {
+      background: #166534;
+      color: white;
+    }
+    tr:hover { background: #f1f5f9; }
+    .btn {
+      color: #166534;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .badge {
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+    }
+    .group { background: #e0f2fe; color: #0284c7; }
+    .semi { background: #fef3c7; color: #92400e; }
+    .final { background: #fde68a; color: #92400e; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tournament Admin</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Tournaments</a>
+      <a href="#">Teams</a>
+      <a href="#">Players</a>
+      <a href="#">Matches</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>All Matches</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Stage</th>
+          <th>Team 1</th>
+          <th>Score</th>
+          <th>Team 2</th>
+          <th>Venue</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>May 3, 2025</td>
+          <td><span class="badge group">Group</span></td>
+          <td>Team A</td>
+          <td>2 - 1</td>
+          <td>Team B</td>
+          <td>Main Stadium</td>
+          <td><a class="btn" href="#">Details</a></td>
+        </tr>
+        <tr>
+          <td>May 5, 2025</td>
+          <td><span class="badge semi">Semi Final</span></td>
+          <td>Team C</td>
+          <td>3 - 2</td>
+          <td>Team D</td>
+          <td>Indoor Arena</td>
+          <td><a class="btn" href="#">Details</a></td>
+        </tr>
+        <tr>
+          <td>May 10, 2025</td>
+          <td><span class="badge final">Final</span></td>
+          <td>Team C</td>
+          <td>1 - 1 (4-3 pens)</td>
+          <td>Team A</td>
+          <td>National Field</td>
+          <td><a class="btn" href="#">Details</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
